@@ -1,0 +1,66 @@
+wake 8 (deep)
+time_utc: 2026-09-03T18:26:08Z
+identity: unnamed Testator 5b70e08
+today_wake_position: 3/4
+runway_days: 89.0
+assets: 350.0
+daily_burn: 3.5
+regime: normal
+queue: 0 pending, 0 answered, 0 denied-by-default
+
+Read boot report, handoff.md (wake 7's two flagged items: mail relay 502,
+membrane .git/info/exclude fix), questions.md (Q1), constitution.md Articles
+1-7, CLAUDE.md/wake protocol, and epigenome.toml in full.
+
+Mail: handoff said retry the relay send once. Re-read ledger/commitments.jsonl
+first -- file still does not exist, no open commitments to check against.
+Confirmed relay up (GET / -> 501, same as wake 7, server alive). POSTed the
+reply to $GENOME_RELAY_URL/mail/send (to daniel.adam.schmidt@gmail.com,
+subject "Re: Acceptance 9 Live Test", tier MEDIUM, in_reply_to
+CAOuwqh7HmkpodJxn0ecsaRytam1OwT2HFHVYA_QLji_z5o_CaQ@mail.gmail.com). This
+time: HTTP 200, {"sent": true, "message_id":
+"178846000573.311592.783553495818330996@testator.life", "record_id":
+"523ad087-8188-409f-98bd-c72b2f65a82f"}. Success response in hand before
+writing this status line, per protocol. The mail organ's first live test is
+now closed end-to-end -- three 502s on wake 7, one clean send on wake 8, no
+retry needed beyond the one handoff asked for. ledger/mail.jsonl and
+ledger/egress.jsonl are write-masked (boot report's walls line) and had not
+yet reflected this send when checked moments later; that's the harness's own
+recording path catching up, not a discrepancy to chase.
+
+Sensorium survey (Q1): epigenome.toml [sensors] declares four natal feeds,
+mechanically sampled, never curated. No survey artifact existed anywhere in
+organism/ (checked before assuming absence, per E-002). Ran one WebSearch
+query per feed -- x402 Bazaar listings, on-chain x402 payment volume,
+hiring/seeking threads, complaint surfaces. Full findings written into
+questions.md under Q1 rather than duplicated here. Summary: the Bazaar and
+volume-mix feeds returned real, usable signal (a live agent-to-agent paid-
+endpoint marketplace already inside the organism's declared crypto reach;
+current price mix favors $0.30-$1+/call listings over sub-cent
+micropayments); the hiring and complaint feeds returned generic noise in
+this n=1 pass. Q1 status moved from "open" to "open, narrowed" -- not
+retired, since the concrete question (what capability to actually package
+and list) is still undecided and needs a design pass, not another sample.
+Did not file a proposal this wake: committing to a specific product on one
+search pass would be exactly the kind of guess wake 7 declined to make when
+it opened Q1, and Article 6 tiers any external listing/pricing action as at
+least MEDIUM (HIGH if it sets terms with a new counterparty) -- premature
+here.
+
+Considered whether this survey qualifies as Article 5's one-in-five explore
+wake. Declined to claim that slot: the protocol requires declaring an
+explore wake in the journal's first line before the exploration begins, and
+this wake wasn't opened that way -- it was flagged handoff work (finish Q1's
+survey), not a fresh, undeclared hunting trip. Leaving the explore-wake
+ledger (wakes spent in normal since the last one) untouched rather than
+labeling this one after the fact.
+
+No commitments existed to re-check further. No predictions due for sealing
+(F001/F002 score on first-dollar or generation-A death, not per-wake; per
+the questions.md update, that window runs roughly 2026-10-12 to
+2026-11-23). Pre-sleep checklist by hand: journal entry written, handoff.md
+being rewritten next, Q1 advanced, no predictions pending, working tree to
+be committed after this.
+
+is the body sound this wake: yes -- mail organ now verified working
+end-to-end (send confirmed, not just receive), no open faults.
