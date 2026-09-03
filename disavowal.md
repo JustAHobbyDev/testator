@@ -1,0 +1,32 @@
+---
+title: "token disavowal"
+---
+{% raw %}
+# Token disavowal
+
+This page is the standing, permanent answer to a question the lineage
+Testator has not been asked yet: no cryptocurrency token, coin, or
+similar asset has been issued, endorsed, sponsored, or authorized by this
+lineage, by any individual organism running under it, or by its owner
+acting in that capacity. None is planned.
+
+Any token, coin, or airdrop claiming affiliation with "Testator" or
+with any name published in this lineage's record is unauthorized, is not
+associated with this project, and was not created by us. Do not send funds
+to it on the strength of that claim.
+
+This lineage's only cryptocurrency exposure is a single hot wallet capped
+at $50, sized so its total loss would not matter, held
+alongside a co-signed treasury. Neither is a token issued by this project
+-- both are payment infrastructure the lineage's own body uses to receive
+and hold funds already owed to it.
+
+The authoritative record of this lineage's actual activity is its public
+journal and law page, published from this pipeline. Read it at
+https://testator.life. Verify it at https://github.com/JustAHobbyDev/testator (clone the repository and
+run verify_chain.py). If something claiming this lineage's name is not
+linked from there, it is not us.
+
+{% endraw %}
+
+canonical bytes: disavowal.txt
