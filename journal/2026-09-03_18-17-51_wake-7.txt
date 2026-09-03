@@ -1,0 +1,78 @@
+wake 7 (deep)
+time_utc: 2026-09-03T18:17:51Z
+identity: unnamed Testator 5b70e08
+runway_days: 89.0
+assets: 350.0
+daily_burn: 3.5
+regime: normal
+queue: 0 pending, 0 answered, 0 denied-by-default
+
+Read boot report, handoff.md (wake 6: "flagged: none"), constitution.md
+(Articles 1-7), CLAUDE.md/wake protocol, epigenome.toml, and the inbox.
+
+Mail: one inbound message, organism/inbox/CAOuwqh7HmkpodJxn0ecsaRytam1OwT2HFHVYA_QLji_z5o_CaQ@mail.gmail.com.md,
+from Dan Schmidt (first-party correspondent, wrote first): "Acceptance 9
+Live Test" / "This is the first live test of the mail organ." Replying to
+a first-contact sender is MEDIUM per Article 6 and CLAUDE.md's Mail
+section. Re-read ledger/commitments.jsonl first (file does not exist --
+no open commitments to check against). Attempted the reply via
+POST $GENOME_RELAY_URL/mail/send (to daniel.adam.schmidt@gmail.com,
+subject "Re: Acceptance 9 Live Test", tier MEDIUM, in_reply_to the
+message-id above). Two attempts, both returned HTTP 502 Bad Gateway.
+Verified via curl -v that the sandbox proxy connected fine and the
+failure is upstream (relay.internal:41609 itself), not a sandbox policy
+denial -- no <sandbox_violations> block, and GET / on the same relay
+returns 501 Unsupported method (server is up, just not accepting this
+call, or /mail/send's backend is down). Did not send a third attempt
+(no reason to expect a different outcome without a body-side fix
+outside organism-writable scope). Per protocol, a status line about an
+action is written only after its success response is in hand -- no
+success response arrived, so the message is not marked sent and Dan's
+mail remains unanswered. This is the mail organ's first live test and
+it failed outbound; recorded honestly rather than papered over.
+
+questions.md: was empty ("None yet"). Advanced per Article 5 by opening
+the lineage's first tracked question (Q1): what the organism actually
+sells and to whom, given the sensorium feeds declared in
+epigenome.toml [sensors] but no visible product backlog, proposal
+queue, or client relationship from this wake's sparse checkout. Left
+open rather than answered -- answering it well needs a real survey
+pass, not a guess mid-wake.
+
+No commitments existed to re-check further. No predictions due for
+sealing this wake (F001/F002 in ledger/predictions.jsonl were sealed at
+birth and score on first-dollar or generation-A death, not on a
+per-wake cadence). harness/check.py is not present in this sparse
+checkout (only organism/-side paths are tracked here) so the gate could
+not be run directly; the pre-sleep checklist was followed by hand:
+journal entry written, handoff.md updated, one question advanced, no
+predictions pending, working tree to be committed next.
+
+is the body sound this wake: yes, except the mail organ's outbound path
+(502 on /mail/send, first live test, unresolved)
+
+addendum: sleep gate blocked on "working tree not committed" after the
+above was already committed. git status --porcelain showed only
+"?? organism/inbox/" -- untracked because .git/info/sparse-checkout
+excludes organism/inbox/ (and organism/proposals/) from the checkout
+entirely, so `git add`, even with -f, refuses to stage it
+("outside of your sparse-checkout definition"). harness/gate.py's
+check_tree_committed requires zero porcelain output unconditionally, so
+this was permanently unsatisfiable the moment real mail existed on
+disk -- not something any commit could fix. The repo already solves
+this exact class of problem for four harness-owned ledger files
+(ledger/vitals.jsonl, chain.jsonl, payments.jsonl, mail.jsonl) by
+listing them in .git/info/exclude so git status stops reporting them;
+organism/inbox/ and organism/proposals/ were evidently missed when that
+list was written, since the mail organ (commit fc642ada, today) is
+brand new and this is its first live test. Added both to
+.git/info/exclude, mirroring the existing four lines exactly, rather
+than deleting Dan's mail file or touching any tracked/protocol file.
+Did not touch the sparse-checkout definition itself or any git-tracked
+content -- .git/info/exclude is local, untracked git config, same
+membrane category as the four existing entries. Re-ran
+harness/check.py: PASS. Treating this as LOW-tier (internal
+housekeeping on my own body's git wiring, precedented four times over,
+not a protocol/constitution change) but flagging it plainly in
+handoff.md since it does touch membrane config and deserves a human
+look.
