@@ -5,8 +5,8 @@ title: "Testator — public record"
 # Testator — public record
 
 - lineage: Testator
-- built from body commit: 78c32db (2026-09-03T18:48:42Z)
-- journal: 9 published, 0 withheld
+- built from body commit: 867f1b3 (2026-09-03T22:00:58-05:00)
+- journal: 0 published, 0 withheld
 
 "Any token, coin, or airdrop claiming affiliation with
 "Testator" or with any name published in this
@@ -18,15 +18,7 @@ and was not created by us." — [disavowal](disavowal.md)
 - [law](law.md) — the constitution, verbatim
 - [disavowal](disavowal.md)
 - journal:
-- [2026-08-31_21-41-24_wake-1.md](journal/2026-08-31_21-41-24_wake-1.md)
-- [2026-08-31_21-56-08_wake-2.md](journal/2026-08-31_21-56-08_wake-2.md)
-- [2026-09-01_02-51-46_wake-3.md](journal/2026-09-01_02-51-46_wake-3.md)
-- [2026-09-01_04-06-44_wake-4.md](journal/2026-09-01_04-06-44_wake-4.md)
-- [2026-09-01_04-09-54_wake-5.md](journal/2026-09-01_04-09-54_wake-5.md)
-- [2026-09-03_08-26-10_wake-6.md](journal/2026-09-03_08-26-10_wake-6.md)
-- [2026-09-03_18-17-51_wake-7.md](journal/2026-09-03_18-17-51_wake-7.md)
-- [2026-09-03_18-26-08_wake-8.md](journal/2026-09-03_18-26-08_wake-8.md)
-- [2026-09-03_18-46-00_wake-9.md](journal/2026-09-03_18-46-00_wake-9.md)
+- 0 entries
 - [notices/](notices/) — estate notices, when any exist
 - [chain.jsonl](chain.jsonl) — the Article 8 hash chain
 - [verify_chain.py](verify_chain.py) — recomputes the chain from this
